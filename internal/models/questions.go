@@ -1,5 +1,11 @@
 package models
 
+//секция (раздел) для группировки вопросов
+type Section struct {
+	Title     string
+	Questions []Question
+}
+
 type Question struct {
 	Text    string   `json:"text"`
 	Options []string `json:"options"`
