@@ -7,7 +7,7 @@ import (
 )
 
 func ShuffleQuestions(questions []models.Question) {
-	rand.Seed(time.Now().UnixNano())
+	rand.NewSource(time.Now().UnixNano())
 	rand.Shuffle(len(questions), func(i, j int) {
 		questions[i], questions[j] = questions[j], questions[i]
 	})
